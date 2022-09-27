@@ -1,0 +1,22 @@
+.btn,
+button {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	text-align: center;
+	color: $white;
+	background: $primary;
+	box-shadow: none;
+	border: none;
+	border-radius: 10px;
+	padding: 20px 64px;
+	transition: background 0.3s ease;
+	&:hover {
+		background: $primary-light;
+	}
+	&:active {
+		background: darken($primary-light, 10);
+	}
+}

@@ -1,0 +1,72 @@
+.new-style {
+	@import '../../../gulp/node_modules/normalize.css/normalize';
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+
+	a {
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	a,
+	button {
+		cursor: pointer;
+		color: inherit;
+		border: none;
+		box-shadow: none;
+		-webkit-appearance: none;
+	}
+	input,
+	textarea,
+	select {
+		-webkit-appearance: none;
+		padding: 10px 0;
+		border: none;
+		border-bottom: 2px solid $black;
+		font-size: 16px;
+		line-height: 120.3%;
+		color: $black;
+		&:focus {
+			outline: none;
+			border-bottom: 2px solid $primary;
+		}
+	}
+	textarea {
+		resize: none;
+	}
+
+	.page {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		overflow: hidden;
+	}
+	.lock {
+		overflow: hidden;
+	}
+	.content {
+		flex: 1 1 auto;
+	}
+
+	.container {
+		max-width: $mediaWidthLaptop;
+		width: 100%;
+		margin: 0 auto;
+		@include media-tablet-horizontal {
+			max-width: 940px;
+		}
+		@include media-tablet {
+			padding: 0px 10px;
+		}
+	}
+}

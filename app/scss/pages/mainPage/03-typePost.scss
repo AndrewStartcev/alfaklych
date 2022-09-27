@@ -1,0 +1,121 @@
+.new-style {
+	.type-post {
+		padding: 76px 0;
+		&__title {
+			text-align: center;
+			color: $primary;
+			font-weight: normal;
+			font-size: 48px;
+			line-height: 1.2;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 70px;
+			text-transform: uppercase;
+		}
+		&__body {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: stretch;
+			gap: 107px 18px;
+		}
+		&__item {
+			flex: 0 0 calc(33.333% - 18px);
+			background-color: #fff;
+			box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+			padding: 45px;
+			text-align: center;
+			position: relative;
+		}
+		&__icon {
+			margin-bottom: 10px;
+			img {
+				width: 96px;
+				height: 96px;
+				object-fit: contain;
+			}
+		}
+		&__name {
+			font-size: 24px;
+			text-transform: uppercase;
+		}
+		&__btn {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 50%);
+			background: $primary;
+			color: #fff;
+			&:hover {
+				background: $primary-light;
+			}
+			&:active {
+				background: darken($primary-light, 10);
+			}
+		}
+		&__marker {
+			position: absolute;
+			top: 23px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #cd0404;
+			font-weight: bold;
+			font-size: 16px;
+			text-transform: uppercase;
+			line-height: 1.2;
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.new-style {
+		.type-post {
+			padding: 80px 0;
+			&__title {
+				margin-bottom: 60px;
+			}
+			&__body {
+				gap: 80px 18px;
+			}
+			&__item {
+				flex: 0 0 calc(50% - 18px);
+				padding: 60px 45px;
+			}
+			&__name {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+@include media-mobile-horizontal {
+	.new-style {
+		.type-post {
+			padding: 80px 0;
+			&__title {
+				font-size: 30px;
+				margin-bottom: 60px;
+			}
+			&__body {
+				gap: 60px 18px;
+			}
+			&__item {
+				flex: 0 0 100%;
+				padding: 40px 25px;
+			}
+			&__name {
+				font-size: 18px;
+			}
+			&__descr {
+				font-size: 14px;
+			}
+			&__btn {
+				font-size: 14px;
+				width: 80%;
+			}
+			&__marker {
+				font-size: 12px;
+			}
+		}
+	}
+}
