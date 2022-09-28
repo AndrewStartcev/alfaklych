@@ -7,6 +7,7 @@
     <title>Альфа ключ</title>
     <link rel="shortcut icon" href="assets/img/upload/favicon.png" type="image/png"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="assets/css/style.min.css"/>
   </head>
   <body id="top">
@@ -180,8 +181,140 @@
             </div>
           </div>
         </section>
+        <section class="main-about">
+          <div class="container">
+            <div class="main-about__body">
+              <div class="main-about__numbers">
+                <div class="main-about__item">
+                  <h3><i>2</i> дня</h3>
+                  <p>Средний срок выдачи денег с момента заявки</p>
+                </div>
+                <div class="main-about__item">
+                  <h3><i>27</i> млрд.₽</h3>
+                  <p>Было выдано нашим клиентам</p>
+                </div>
+                <div class="main-about__item">
+                  <h3><i>98</i>%</h3>
+                  <p>Вероятность одобрения заявки</p>
+                </div>
+                <div class="main-about__item">
+                  <h3><i>15</i></h3>
+                  <p>Квалифицированных сотрудника</p>
+                </div>
+              </div>
+              <div class="main-about__content">
+                <h2>О компании</h2>
+                <p>Наша компания была образована в разгар финансового кризиса топ-менеджерами крупнейших российских банков.</p>
+                <p>Целью компании являлось оказание поддержки тем, кому повсеместно в данной поддержке было отказано.</p>
+                <p>На сегодняшний день она достигнута, и превратилась из цели в миссию, которую мы успешно осуществляем уже много лет.</p><a class="btn" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="calculator">
+          <div class="container">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <div class="calculator__body">
+              <div class="calculator__form">
+                <div class="calculator__select">
+                  <label for="calcPrograms">Ипотечные программы</label>
+                  <select id="calcPrograms" name="clc_programs">
+                    <option disabled="disabled" value="#">Ипотечные программы</option>
+                    <option value="Построить дом">Построить дом</option>
+                  </select>
+                </div>
+                <div class="calculator__radio-group">
+                  <div class="calculator__radio">
+                    <input id="radio_1" type="radio" name="radio_name"/>
+                    <label for="radio_1">Ипотека на строительство дома <span>от 6,3%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_2" type="radio" name="radio_name"/>
+                    <label for="radio_2">Семейная ипотека <span>от 5,3%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_3" type="radio" name="radio_name"/>
+                    <label for="radio_3">Ипотека без первого взноса <span>от 9,9%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_4" type="radio" name="radio_name"/>
+                    <label for="radio_4">Ипотека на новостройки <span>от 0,1%</span></label>
+                  </div>
+                </div>
+                <div class="calculator__select">
+                  <label for="calcSity">Регион покупки недвижимости</label>
+                  <select id="calcSity" name="clc_sity">
+                    <option disabled="disabled" value="#">Регион покупки недвижимости</option>
+                    <option value="Москва">Москва</option>
+                  </select>
+                </div>
+                <div class="calculator__callout callout">
+                  <button class="callout__close"></button><b>По программе можно:</b>
+                  <ul>
+                    <li>- с помощью подрядчика построить жилой дом</li>
+                    <li>- потратить кредит на покупку участка и дальнейшее строительство дома с помощью подрядчика</li>
+                  </ul>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Стоимость недвижимости</label><input type="text" id="amount-1" readonly>
+<div id="slider-range-1"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 353 000</p>
+                    <p>до 100 000 000</p>
+                  </div>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Первоначальный взнос</label><input type="text" id="amount-2" readonly>
+<div id="slider-range-2"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 950 000</p>
+                    <p>до 6 000 000</p>
+                  </div>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Срок кредита</label><input type="text" id="amount-3" readonly>
+<div id="slider-range-3"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 1 года</p>
+                    <p>до 30 лет</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator__wrapper">
+                <div class="calculator__tablo tablo">
+                  <div class="tablo__wrapper">
+                    <div class="tablo__item">
+                      <h3>Ежемесячный платеж</h3>
+                      <p id="tablo-1">36 200 ₽</p>
+                    </div>
+                    <div class="tablo__item blue">
+                      <h3>Процентная ставка</h3>
+                      <p id="tablo-2">5,3%</p>
+                    </div>
+                    <div class="tablo__item">
+                      <h3>Сумма кредита</h3>
+                      <p id="tablo-3">5 350 000 ₽</p>
+                    </div>
+                    <div class="tablo__item">
+                      <h3>Необходимый доход</h3>
+                      <p id="tablo-4">50 680 ₽</p>
+                    </div>
+                  </div><a class="btn" href="#">Получить одобрение</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script src="assets/js/main.min.js"></script>
     </div>

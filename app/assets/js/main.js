@@ -1,5 +1,40 @@
 $(document).ready(() => {
 
+  $("#slider-range-1").slider({
+    range: "min",
+    value: 6500000,
+    step: 1000,
+    min: 343000,
+    max: 100000000,
+    slide: function (event, ui) {
+      $("#amount-1").val(ui.value);
+    }
+  });
+  $("#amount-1").val($("#slider-range-1").slider("value"));
+  $("#slider-range-2").slider({
+    range: "min",
+    value: 1500000,
+    step: 1000,
+    min: 950000,
+    max: 6000000,
+    slide: function (event, ui) {
+      $("#amount-2").val(ui.value);
+    }
+  });
+  $("#amount-2").val($("#slider-range-2").slider("value"));
+  $("#slider-range-3").slider({
+    range: "min",
+    value: 20,
+    step: 1,
+    min: 1,
+    max: 30,
+    slide: function (event, ui) {
+      $("#amount-3").val(ui.value);
+    }
+  });
+  $("#amount-3").val($("#slider-range-3").slider("value"));
+
+
 })
 
 

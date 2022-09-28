@@ -1,0 +1,75 @@
+section.calculator
+  .container
+    h2.calculator__title Калькулятор
+    .calculator__body
+      .calculator__form
+        .calculator__select
+          label(for="calcPrograms") Ипотечные программы
+          select#calcPrograms(name="clc_programs")
+            option(disabled value="#") Ипотечные программы
+            option(value="Построить дом") Построить дом
+        .calculator__radio-group
+          .calculator__radio
+            input#radio_1(type="radio", name="radio_name")
+            label(for="radio_1") Ипотека на строительство дома <span>от 6,3%</span>
+          .calculator__radio
+            input#radio_2(type="radio", name="radio_name")
+            label(for="radio_2") Семейная ипотека <span>от 5,3%</span>
+          .calculator__radio
+            input#radio_3(type="radio", name="radio_name")
+            label(for="radio_3") Ипотека без первого взноса <span>от 9,9%</span>
+          .calculator__radio
+            input#radio_4(type="radio", name="radio_name")
+            label(for="radio_4") Ипотека на новостройки <span>от 0,1%</span>
+        .calculator__select
+          label(for="calcSity") Регион покупки недвижимости
+          select#calcSity(name="clc_sity")
+            option(disabled value="#") Регион покупки недвижимости
+            option(value="Москва") Москва
+        .calculator__callout.callout
+          button.callout__close
+          b По программе можно:
+          ul
+            li - с помощью подрядчика построить жилой дом
+            li - потратить кредит на покупку участка и дальнейшее строительство дома с помощью подрядчика
+        .calculator__slider
+          .calculator__slider-item
+            label(for="") Стоимость недвижимости
+            <input type="text" id="amount-1" readonly>
+            <div id="slider-range-1"></div>
+          .calculator__slider-footer
+            p от 353 000
+            p до 100 000 000
+        .calculator__slider
+          .calculator__slider-item
+            label(for="") Первоначальный взнос
+            <input type="text" id="amount-2" readonly>
+            <div id="slider-range-2"></div>
+          .calculator__slider-footer
+            p от 950 000
+            p до 6 000 000
+        .calculator__slider
+          .calculator__slider-item
+            label(for="") Срок кредита
+            <input type="text" id="amount-3" readonly>
+            <div id="slider-range-3"></div>
+          .calculator__slider-footer
+            p от 1 года
+            p до 30 лет
+
+      .calculator__wrapper
+        .calculator__tablo.tablo
+          .tablo__wrapper
+            .tablo__item
+              h3 Ежемесячный платеж
+              p#tablo-1 36 200 ₽
+            .tablo__item.blue
+              h3 Процентная ставка
+              p#tablo-2 5,3%
+            .tablo__item
+              h3 Сумма кредита
+              p#tablo-3 5 350 000 ₽
+            .tablo__item
+              h3 Необходимый доход
+              p#tablo-4 50 680 ₽
+          a.btn(href="#") Получить одобрение

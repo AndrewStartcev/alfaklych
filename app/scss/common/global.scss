@@ -26,21 +26,6 @@
 		box-shadow: none;
 		-webkit-appearance: none;
 	}
-	input,
-	textarea,
-	select {
-		-webkit-appearance: none;
-		padding: 10px 0;
-		border: none;
-		border-bottom: 2px solid $black;
-		font-size: 16px;
-		line-height: 120.3%;
-		color: $black;
-		&:focus {
-			outline: none;
-			border-bottom: 2px solid $primary;
-		}
-	}
 	textarea {
 		resize: none;
 	}
