@@ -37,6 +37,30 @@ $(document).ready(() => {
 
 })
 
+const feedbacksSwiper = new Swiper('.feedbacks__slider', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+
+  autoplay: {
+    disableOnInteraction: false,
+    delay: 5000,
+  },
+  navigation: {
+    nextEl: '.feedbacks__button--next',
+    prevEl: '.feedbacks__button--prev',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  breakpoints: {
+    1023: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    }
+  }
+});
 
 const mainSwiper = new Swiper('.main-slider', {
   loop: true,
