@@ -15,6 +15,35 @@ function settings_carbon() {
         Field::make( 'textarea', 'crb_footer_text', __( 'Footer Text' ) ),
     ) );
 
+  Container::make( 'theme_options', 'Калькулятор' )
+    ->set_page_parent( $basic_all_blocks )
+    ->set_page_file( 'crb_calc' )
+    ->add_fields( array(
+        Field::make( 'text', 'calc_title', 'Заголовок' ),
+        Field::make( 'complex', 'calc_programs', 'Программы' )
+          ->set_collapsed(true)
+          ->set_layout('tabbed-vertical')
+          ->add_fields(array(
+              Field::make( 'text', 'name', 'Название' )->set_width(50),
+              Field::make( 'number', 'number', 'Процент (2.3)' )->set_width(50),
+              Field::make( 'complex', 'text', 'По программе можно:' )
+                ->set_collapsed(true)
+                ->add_fields(array(
+                    Field::make( 'text', 'name', 'Текст' ),
+              ))
+              ->set_header_template( '
+                <% if (name) { %>
+                  <%- name %>
+                <% } %>
+              ' ),
+              ))
+        ->set_header_template( '
+					<% if (name) { %>
+						<%- name %>
+					<% } %>
+				' ),
+  ));
+
   Container::make( 'theme_options', 'Форма Косультация' )
     ->set_page_parent( $basic_all_blocks )
     ->add_fields( array(
@@ -34,7 +63,7 @@ function settings_carbon() {
           ->add_fields(array(
               Field::make( 'text', 'name', 'ФИО' ),
               Field::make( 'text', 'date', 'Дата' ),
-              Field::make( 'textarea', 'text', 'Описание' ),
+              Field::make( 'rich_text', 'text', 'Описание' ),
               Field::make( 'file', 'file', 'Видео файл' )
                 ->set_value_type( 'url' )
                 ->set_width(50),
@@ -55,6 +84,56 @@ function settings_carbon() {
         Field::make( 'text', 'banky_title', 'Заголовок' ),
         Field::make( 'media_gallery', 'banky_gallery', 'Логотипы' ) )
           ->set_type( array( 'image' ) )
+  ));
+
+  Container::make( 'theme_options', 'Контакты' )
+    ->set_page_parent( $basic_all_blocks )
+    ->set_page_file( 'crb_contats' )
+    ->add_fields( array(
+        Field::make( 'text', 'contacts_title', 'Заголовок' ),
+        Field::make( 'complex', 'contacts_links', 'Контакты' )
+          ->set_collapsed(true)
+          ->set_layout('tabbed-vertical')
+          ->add_fields(array(
+              Field::make( 'text', 'name', 'Название' )->set_width(50),
+              Field::make( 'text', 'link', 'Ссылка' )->set_width(50),
+              Field::make( 'rich_text', 'text', 'Описание' )->set_width(50),
+              Field::make( 'image', 'icon', 'Иконка' )
+                ->set_width(50),
+        ))
+        ->set_header_template( '
+					<% if (name) { %>
+						<%- name %>
+					<% } %>
+				' ),
+        Field::make( 'complex', 'contacts_address', 'Адреса' )
+          ->set_collapsed(true)
+          ->set_layout('tabbed-vertical')
+          ->add_fields(array(
+              Field::make( 'text', 'name', 'Название' )->set_width(50),
+              Field::make( 'image', 'icon', 'Иконка' )
+                ->set_width(50),
+        ))
+        ->set_header_template( '
+					<% if (name) { %>
+						<%- name %>
+					<% } %>
+				' ),
+        Field::make( 'complex', 'contacts_socials', 'Соц-сети' )
+          ->set_collapsed(true)
+          ->set_layout('tabbed-vertical')
+          ->add_fields(array(
+              Field::make( 'text', 'name', 'Название' )->set_width(50),
+              Field::make( 'text', 'link', 'Ссылка' )->set_width(50),
+              Field::make( 'image', 'icon', 'Иконка' )
+                ->set_width(50),
+        ))
+        ->set_header_template( '
+					<% if (name) { %>
+						<%- name %>
+					<% } %>
+				' ),
+        Field::make( 'textarea', 'contacts_map', 'Код карты' ),
   ));
 
 }

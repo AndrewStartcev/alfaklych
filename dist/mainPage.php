@@ -139,54 +139,39 @@
     </section>
 
 
-    <!-- <section class="calculator">
+    <?php
+      $calc_title = carbon_get_theme_option( 'calc_title' );
+      $calc_programs = carbon_get_theme_option( 'calc_programs' );
+
+      if(!empty($calc_programs)):
+    ?>
+    <section class="calculator">
       <div class="container">
-        <h2 class="calculator__title">Калькулятор</h2>
+        <h2 class="calculator__title"><?php echo $calc_title ?></h2>
         <div class="calculator__body">
           <div class="calculator__form">
-            <div class="calculator__select">
-              <label for="calcPrograms">Ипотечные программы</label>
-              <select id="calcPrograms" name="clc_programs">
-                <option disabled="disabled" value="#">Ипотечные программы</option>
-                <option value="Построить дом">Построить дом</option>
-              </select>
-            </div>
+            <h4>Ипотечные программы</h4>
             <div class="calculator__radio-group">
+              <?php foreach($calc_programs as $key => $calc_program): ?>
               <div class="calculator__radio">
-                <input id="radio_1" type="radio" name="radio_name" />
-                <label for="radio_1">Ипотека на строительство дома <span>от 6,3%</span></label>
+                <input id="radio_<?php echo $key?>" type="radio" name="radio_name" data-name="<?php echo $calc_program['name'] ?>" value="<?php echo $calc_program['number'] ?>" checked="checked"/>
+                <label for="radio_<?php echo $key?>"><?php echo $calc_program['name'] ?> <span>от <?php echo $calc_program['number'] ?>%</span></label>
               </div>
-              <div class="calculator__radio">
-                <input id="radio_2" type="radio" name="radio_name" />
-                <label for="radio_2">Семейная ипотека <span>от 5,3%</span></label>
-              </div>
-              <div class="calculator__radio">
-                <input id="radio_3" type="radio" name="radio_name" />
-                <label for="radio_3">Ипотека без первого взноса <span>от 9,9%</span></label>
-              </div>
-              <div class="calculator__radio">
-                <input id="radio_4" type="radio" name="radio_name" />
-                <label for="radio_4">Ипотека на новостройки <span>от 0,1%</span></label>
-              </div>
+              <?php endforeach; ?>
             </div>
-            <div class="calculator__select">
-              <label for="calcSity">Регион покупки недвижимости</label>
-              <select id="calcSity" name="clc_sity">
-                <option disabled="disabled" value="#">Регион покупки недвижимости</option>
-                <option value="Москва">Москва</option>
-              </select>
-            </div>
-            <div class="calculator__callout callout">
-              <button class="callout__close"></button><b>По программе можно:</b>
+            <?php foreach($calc_programs as $key => $calc_program): ?>
+            <div class="calculator__callout callout show" data-theme="<?php echo $calc_program['name'] ?>"><b>По программе можно:</b>
               <ul>
-                <li>- с помощью подрядчика построить жилой дом</li>
-                <li>- потратить кредит на покупку участка и дальнейшее строительство дома с помощью подрядчика</li>
+                <?php foreach($calc_program['text'] as $text): ?>
+                <li>- <?php echo $text['name'] ?></li>
+                <?php endforeach; ?>
               </ul>
             </div>
+            <?php endforeach; ?>
             <div class="calculator__slider">
               <div class="calculator__slider-item">
                 <label for="">Стоимость недвижимости</label><input type="text" id="amount-1" readonly>
-                <div id="slider-range-1"></div>
+                <div id="slider-range-1" data-min="353000" data-max="100000000" ></div>
               </div>
               <div class="calculator__slider-footer">
                 <p>от 353 000</p>
@@ -196,17 +181,17 @@
             <div class="calculator__slider">
               <div class="calculator__slider-item">
                 <label for="">Первоначальный взнос</label><input type="text" id="amount-2" readonly>
-                <div id="slider-range-2"></div>
+                <div id="slider-range-2" data-min="95000" data-max="900000"></div>
               </div>
               <div class="calculator__slider-footer">
-                <p>от 950 000</p>
-                <p>до 6 000 000</p>
+                <p>от 95 000</p>
+                <p>до 900 000</p>
               </div>
             </div>
             <div class="calculator__slider">
               <div class="calculator__slider-item">
                 <label for="">Срок кредита</label><input type="text" id="amount-3" readonly>
-                <div id="slider-range-3"></div>
+                <div id="slider-range-3" data-min="1" data-max="30"></div>
               </div>
               <div class="calculator__slider-footer">
                 <p>от 1 года</p>
@@ -223,7 +208,7 @@
                 </div>
                 <div class="tablo__item blue">
                   <h3>Процентная ставка</h3>
-                  <p id="tablo-2">5,3%</p>
+                  <p id="tablo-2"></p>
                 </div>
                 <div class="tablo__item">
                   <h3>Сумма кредита</h3>
@@ -233,12 +218,16 @@
                   <h3>Необходимый доход</h3>
                   <p id="tablo-4">50 680 ₽</p>
                 </div>
-              </div><a class="btn" href="#">Получить одобрение</a>
+              </div>
+
+              <span class="su-lightbox" data-mfp-src="#forma" data-mfp-type="inline" data-mobile="yes"><button class="btn" >Получить одобрение</button></span>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+    <?php endif; ?>
+
     <?php
       $offer_title = carbon_get_theme_option( 'offer_title' );
       $offer_shortcode = carbon_get_theme_option( 'offer_shortcode' );
@@ -333,44 +322,50 @@
       </div>
     </section>
 
-    <!-- <section class="contacts">
+    <?php
+      $contacts_title = carbon_get_theme_option( 'contacts_title' );
+      $contacts_links = carbon_get_theme_option( 'contacts_links' );
+      $contacts_address = carbon_get_theme_option( 'contacts_address' );
+      $contacts_socials = carbon_get_theme_option( 'contacts_socials' );
+      $contacts_map = carbon_get_theme_option( 'contacts_map' );
+    ?>
+    <section class="contacts">
       <div class="contacts__map">
-        <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A455dece8a71aef497ffea9dd5244d27ae070b2211950355a645f8139d7052af6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+        <?php echo $contacts_map ?>
       </div>
       <div class="container">
         <div class="contacts__item">
-          <h2>Наши контакты</h2>
-          <div class="contacts-group">
-            <div class="contacts-group__icon"><img src="assets/img/uploads/whatsApp.png" alt="" /></div>
-            <div class="contacts-group__content"><a href="3">+7 (495) 266 61 61</a>
-              <p>Пн-Пт с 10.00 до 20.00,</p>
-              <p>Сб-Вс с 11.00 до 18.00</p>
+          <h2> <?php echo $contacts_title ?></h2>
+          <?php foreach($contacts_links as $contacts_link): ?>
+            <div class="contacts-group">
+              <div class="contacts-group__icon">
+                <?php echo wp_get_attachment_image($contacts_link['icon'], 'full'); ?>
+              </div>
+              <div class="contacts-group__content"><a href="<?php echo $contacts_link['link'] ?>"><?php echo $contacts_link['name'] ?></a>
+                <?php echo apply_filters( 'the_content', $contacts_link['text'] ); ?>
+              </div>
             </div>
-          </div>
-          <div class="contacts-group">
-            <div class="contacts-group__icon"><img src="assets/img/uploads/email.png" alt="" /></div>
-            <div class="contacts-group__content"><a href="#">info@alfaklych.ru</a></div>
-          </div>
+          <?php endforeach; ?>
+          <?php foreach($contacts_address as $contacts_addres): ?>
           <div class="contacts-address">
             <div class="contacts-group">
-              <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt="" /></div>
-              <div class="contacts-group__content"><span>г. Москва, пр-кт Мира, д. 68,стр.1а, офис 408</span></div>
-            </div>
-            <div class="contacts-group">
-              <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt="" /></div>
-              <div class="contacts-group__content"><span>г. г. Москва, м. Котельники</span></div>
-            </div>
-            <div class="contacts-group">
-              <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt="" /></div>
-              <div class="contacts-group__content"><span>г. Москва, м. Строгино</span></div>
+              <div class="contacts-group__icon">
+                <?php echo wp_get_attachment_image($contacts_addres['icon'], 'full'); ?>
+              </div>
+              <div class="contacts-group__content"><span><?php echo $contacts_addres['name'] ?></span></div>
             </div>
           </div>
-          <div class="contacts__social"><a href=""><img src="assets/img/uploads/vk.png" alt="" /></a><a href=""><img
-                src="assets/img/uploads/ok.png" alt="" /></a></div>
+          <?php endforeach; ?>
+          <div class="contacts__social">
+          <?php foreach($contacts_socials as $contacts_social): ?>
+            <a href="<?php echo $contacts_social['link'] ?>">
+              <?php echo wp_get_attachment_image($contacts_social['icon'], 'full'); ?>
+            </a>
+          <?php endforeach; ?>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
   </main>
 </div>

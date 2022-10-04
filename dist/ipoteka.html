@@ -1,0 +1,439 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Альфа ключ</title>
+    <link rel="shortcut icon" href="assets/img/upload/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="assets/css/style.min.css"/>
+  </head>
+  <body id="top">
+    <div class="page new-style">
+      <main class="content">
+        <section class="ipoteka-main">
+          <div class="container">
+            <h1>Ипотека без первоначального взноса</h1>
+            <div class="ipoteka-main__body">
+              <div class="ipoteka-main__numbers">
+                <div class="ipoteka-main__item">
+                  <h2>до <i>30</i> млн. ₽</h2>
+                  <p>Сумма кредита</p>
+                </div>
+                <div class="ipoteka-main__item">
+                  <h2>до <i>30</i> лет</h2>
+                  <p>Срок кредита</p>
+                </div>
+                <div class="ipoteka-main__item">
+                  <h2>от <i>7,8%</i></h2>
+                  <p>Процентная ставка</p>
+                </div>
+                <div class="ipoteka-main__item">
+                  <h2><i>1</i> день</h2>
+                  <p>Срок рассмотрения</p>
+                </div>
+              </div>
+              <div class="ipoteka-main__block">
+                <div class="ipoteka-main__image"><img src="assets/img/uploads/ipoteka-image.jpg" alt=""/></div>
+                <div class="ipoteka-main__content">
+                  <ul>
+                    <li>Ипотека на новостройки и вторичное жилье</li>
+                    <li>Ипотека по 2м документам</li>
+                    <li>Ипотека без первоначального взноса</li>
+                    <li>Ипотека для иностранцев</li>
+                    <li>Ипотека с плохой кредитной историей</li>
+                    <li>Ипотека без страховаия жизни</li>
+                  </ul><a class="btn ipoteka-main__btn" href="#">Узнать условия кредита</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="calculator">
+          <div class="container">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <div class="calculator__body">
+              <div class="calculator__form">
+                <h4>Ипотечные программы</h4>
+                <div class="calculator__radio-group">
+                  <div class="calculator__radio">
+                    <input id="radio_1" type="radio" name="radio_name" data-name="Ипотека на строительство дома" value="6.3" checked="checked"/>
+                    <label for="radio_1">Ипотека на строительство дома <span>от 6,3%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_2" type="radio" name="radio_name" data-name="Семейная ипотека" value="5.3"/>
+                    <label for="radio_2">Семейная ипотека <span>от 5,3%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_3" type="radio" name="radio_name" data-name="Ипотека без первого взноса" value="9.9"/>
+                    <label for="radio_3">Ипотека без первого взноса <span>от 9,9%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_4" type="radio" name="radio_name" data-name="Ипотека на новостройки" value="0.1"/>
+                    <label for="radio_4">Ипотека на новостройки <span>от 0,1%</span></label>
+                  </div>
+                </div>
+                <div class="calculator__callout callout show" data-theme="Ипотека на строительство дома"><b>По программе можно:</b>
+                  <ul>
+                    <li>- с помощью подрядчика построить жилой дом</li>
+                    <li>- потратить кредит на покупку участка и дальнейшее строительство дома с помощью подрядчика</li>
+                  </ul>
+                </div>
+                <div class="calculator__callout callout" data-theme="Семейная ипотека"><b>По программе можно:</b>
+                  <ul>
+                    <li>- максимальная сумма кредита до 12млн. рублей</li>
+                    <li>- подходит для семей с детьми, в которых хотя бы один из детей родился после 1 января 2018 года, или для детей инвалидов.</li>
+                  </ul>
+                </div>
+                <div class="calculator__callout callout" data-theme="Ипотека без первого взноса"><b>По программе можно:</b>
+                  <ul>
+                    <li>- одобряем ипотеку без официального трудоустройства</li>
+                    <li>- одобряем ипотеку с плохой кредитной историей</li>
+                  </ul>
+                </div>
+                <div class="calculator__callout callout" data-theme="Ипотека на новостройки"><b>По программе можно:</b>
+                  <ul>
+                    <li>- Cубсидированные ставки от крупных застройщиков</li>
+                  </ul>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Стоимость недвижимости</label><input type="text" id="amount-1" readonly>
+<div id="slider-range-1" data-min="353000" data-max="100000000" ></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 353 000</p>
+                    <p>до 100 000 000</p>
+                  </div>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Первоначальный взнос</label><input type="text" id="amount-2" readonly>
+<div id="slider-range-2" data-min="95000" data-max="900000"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 95 000</p>
+                    <p>до 900 000</p>
+                  </div>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Срок кредита</label><input type="text" id="amount-3" readonly>
+<div id="slider-range-3" data-min="1" data-max="30"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 1 года</p>
+                    <p>до 30 лет</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator__wrapper">
+                <div class="calculator__tablo tablo">
+                  <div class="tablo__wrapper">
+                    <div class="tablo__item">
+                      <h3>Ежемесячный платеж</h3>
+                      <p id="tablo-1">36 200 ₽</p>
+                    </div>
+                    <div class="tablo__item blue">
+                      <h3>Процентная ставка</h3>
+                      <p id="tablo-2"></p>
+                    </div>
+                    <div class="tablo__item">
+                      <h3>Сумма кредита</h3>
+                      <p id="tablo-3">5 350 000 ₽</p>
+                    </div>
+                    <div class="tablo__item">
+                      <h3>Необходимый доход</h3>
+                      <p id="tablo-4">50 680 ₽</p>
+                    </div>
+                  </div><a class="btn" href="#">Получить одобрение</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ipoteka-visual">
+          <div class="container">
+            <h2>Оформление ипотеки без первоначального взноса "под ключ"</h2>
+            <p>До сих пор считаете, что невозможно приобрести недвижимость в ипотеку без оплаты первоначального взноса? Мы на собственном опыте доказываем обратное. Накопить сумму, требуемую банком, иной раз сложно, особенно если речь идет о покупке квартиры  в больших городах. Поэтому мы предлагаем четыре рабочих варианта оформления ипотеки с минимальным взносом или вовсе без него.</p>
+            <div class="ipoteka-visual__wrapper">
+              <h3>Как такое возможно?</h3>
+              <div class="ipoteka-visual__blocks">
+                <div class="ipoteka-visual__item">
+                  <div class="ipoteka-visual__number">1</div>
+                  <div class="ipoteka-visual__content">
+                    <p>У некоторых банков существуют готовые ипотечные программы, которые не предусматривают первоначального взноса. Чтобы скомпенсировать риски, финансовые учреждения <b>ненамного завышают ставки</b>, а также с особой тщательностью подходят к вопросу одобрения ипотеки.</p>
+                  </div>
+                </div>
+                <div class="ipoteka-visual__item">
+                  <div class="ipoteka-visual__number">2</div>
+                  <div class="ipoteka-visual__content">
+                    <p>Оформление ипотечного <b>договора под залог уже имеющейся недвижимости</b>. Мы рекомендуем этот способ для тех, кто планирует переехать в другой регион и не хочет тратить деньги на съем жилья в новом городе.</p>
+                  </div>
+                </div>
+                <div class="ipoteka-visual__item">
+                  <div class="ipoteka-visual__number">3</div>
+                  <div class="ipoteka-visual__content">
+                    <p>Приобретение недвижимости <b>со скидкой до 20%</b> от среднерыночной цены.</p>
+                  </div>
+                </div>
+                <div class="ipoteka-visual__item">
+                  <div class="ipoteka-visual__number">4</div>
+                  <div class="ipoteka-visual__content">
+                    <p>Покупка недвижимости за счет <b>потребительского кредитования</b>. Если финансовое положение позволяет, то на сумму первоначального взноса выдается кредит, после чего можно оформить ипотеку согласно обычной процедуре.</p>
+                  </div>
+                </div>
+              </div>
+              <p>Впрочем, наши специалисты знают и другие варианты покупки ипотечного жилья для тех, у кого нет средств на первоначальный взнос. <b>Запишитесь на бесплатную консультацию</b> – и мы расскажем, какой из них лучше всего подойдет для вашей ситуации.</p><a class="btn" href="#">Проконсультироваться</a>
+            </div>
+          </div>
+        </section>
+        <section class="ipoteka-how">
+          <div class="container">
+            <h2>Кто может рассчитывать на ипотеку без первого взноса?</h2>
+            <div class="ipoteka-how__wrapper">
+              <div class="ipoteka-how__item">
+                <div class="ipoteka-how__icon"><img src="assets/img/uploads/calc-1.png" alt=""/></div>
+                <h3>Граждане с наличием высокого, стабильного дохода.</h3>
+                <p>При условии положительной кредитной истории.</p>
+              </div>
+              <div class="ipoteka-how__item">
+                <div class="ipoteka-how__icon"><img src="assets/img/uploads/calc-2.png" alt=""/></div>
+                <h3>Возраст ограничен</h3>
+                <p>Многие банковские заведения не работают с лицами старше 65 лет и младше 19 лет.</p>
+              </div>
+              <div class="ipoteka-how__item">
+                <div class="ipoteka-how__icon"><img src="assets/img/uploads/calc-4.png" alt=""/></div>
+                <h3>При наличии сберегательного счета в банке для зарплатных клиентов</h3>
+              </div>
+              <div class="ipoteka-how__item">
+                <div class="ipoteka-how__icon"><img src="assets/img/uploads/calc-5.png" alt=""/></div>
+                <h3>В случае наличия имущества под залог (недвижимости)</h3>
+                <p>Также эта категория может рассчитывать на более лояльную ставку.</p>
+              </div>
+              <div class="ipoteka-how__item">
+                <div class="ipoteka-how__icon"><img src="assets/img/uploads/calc-6.png" alt=""/></div>
+                <h3>При участии в специальных программах по первоначальному взносу</h3>
+              </div>
+              <div class="ipoteka-how__item">
+                <div class="ipoteka-how__icon"><img src="assets/img/uploads/calc-7.png" alt=""/></div>
+                <h3>С внесением материнского капитала</h3>
+                <p>Однако следует своевременно оплачивать суммы, в ином случае эта часть вложенных средств может быть исключена из займа.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ipoteka-features">
+          <div class="container">
+            <h2>Какие преимущества дает ипотека без первого взноса?</h2>
+            <div class="ipoteka-features__wrapper">
+              <div class="ipoteka-features__list yes">
+                <div class="ipoteka-features__item">
+                  <h3>Нет необходимости сбора первой суммы.</h3>
+                  <p>На взнос нередко приходится долго копить, а это вызывает неудобства и заставляет дольше снимать жилье или ютиться в дискомфорте</p>
+                </div>
+                <div class="ipoteka-features__item">
+                  <h3>Гарантия юридической чистоты.</h3>
+                  <p>Поскольку банкиры и юристы заведений очень переживают за свои деньги, проверка сделок реализуется очень тщательно</p>
+                </div>
+                <div class="ipoteka-features__item">
+                  <h3>При покупке через застройщика банк также принимает на себя риски</h3>
+                </div>
+                <div class="ipoteka-features__item">
+                  <h3>Возможность кредитования в непростых условиях</h3>
+                </div>
+              </div>
+              <div class="ipoteka-features__list no">
+                <div class="ipoteka-features__item">
+                  <h3>Невозможность участия в ряде льготных кредитов</h3>
+                </div>
+                <div class="ipoteka-features__item">
+                  <h3>Более высокие ставки</h3>
+                </div>
+                <div class="ipoteka-features__item">
+                  <h3>Повышенные требования к заемщикам</h3>
+                </div>
+              </div>
+            </div>
+            <div class="ipoteka-features__footer">
+              <p>Банковские заведения также получают выгоду, ведь такие предложения позволяют расширить круг потенциальных заемщиков. Для кредитования могут учитываться дополнительные параметры, например, может требоваться гражданство, необходимо официально подтвердить уровень доходов. Сумма выплат не должна превышать 40% от общего дохода.</p>
+              <p><b>Вопреки ряду сложностей и недочетов ипотека без первого взноса достаточно востребована, поскольку позволяет быстро приобретать недвижимость.</b></p><a class="btn" href="#">Узнать условия</a>
+            </div>
+          </div>
+        </section>
+        <section class="offer">
+          <div class="container">
+            <div class="offer__wrapper">
+              <div class="offer__content">
+                <h2>Персональная консультация</h2>
+                <p>Наш менеджер перезвонит вам в течение 15 минут</p>
+              </div>
+              <div class="offer__form">
+                <form action="">
+                  <input type="text" placeholder="Имя"/>
+                  <input type="tel" placeholder="Телефон"/>
+                  <input class="btn" type="submit" value="Заказать звонок"/>
+                  <div class="offer-checked">
+                    <input id="policy" type="checkbox" name=""/>
+                    <label for="policy">Согласие на обработку <a href="#">персональных данных</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="ipoteka-how-me">
+          <div class="container">
+            <h2>Почему с нами выгодно сотрудничать?</h2>
+            <div class="ipoteka-how-me__wrapper">
+              <div class="ipoteka-how-me__item"><img src="assets/img/uploads/how-1.png" alt=""/>
+                <p>Многочисленные отказы от банков по разным причинам – в 80% случаев наши специалисты находят <i>решение за 30 минут!</i></p>
+              </div>
+              <div class="ipoteka-how-me__item"><img src="assets/img/uploads/how-2.png" alt=""/>
+                <p><i>Большая кредитная нагрузка</i> – подберем оптимальную ипотечную программу, даже если вы уже выплачиваете проценты по трем и более кредитам</p>
+              </div>
+              <div class="ipoteka-how-me__item"><img src="assets/img/uploads/how-3.png" alt=""/>
+                <p><i>Плохая кредитная история</i> – даже если в прошлом вы несколько раз нарушали сроки платежей, это не станет препятствием на пути к собственному жилью</p>
+              </div>
+              <div class="ipoteka-how-me__item"><img src="assets/img/uploads/how-4.png" alt=""/>
+                <p><i>Иностранное или «свежее» российское гражданство</i> знаем, как действовать в этой ситуации!</p>
+              </div>
+            </div>
+            <div class="ipoteka-how-me__footer">
+              <p>Гарантируем одобрение ипотеки, даже если нет полного комплекта документации!</p><a class="btn" href="#">Получить консультацию</a>
+            </div>
+          </div>
+        </section>
+        <section class="how-start">
+          <div class="container">
+            <div class="how-start__header">
+              <h2>Как все будет происходить?</h2>
+              <p>На предварительной консультации мы обсудим текущую ситуацию, выберем ипотечную программу и, при согласии на сотрудничество, подпишем договор. <b>После этого наши специалисты:</b></p>
+            </div>
+            <div class="how-start__body">
+              <div class="how-start__item">
+                <div class="how-start__number">1</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-1.png" alt=""/></div>
+                <p><b>Подготовят весь пакет документов:</b> проверят реквизиты, правильно заверят копии, убедятся, что итоговый список полностью соответствует требованиям банка</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">2</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-2.png" alt=""/></div>
+                <p><b>Подберут объект для покупки</b> с учетом ваших пожеланий (новостройка, вторичный рынок)</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">3</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-3.png" alt=""/></div>
+                <p><b>Проведут независимую оценку объекта</b> (для строящегося жилья эта процедура не проводится)</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">4</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-4.png" alt=""/></div>
+                <p><b>Проверят юридическую чистоту объекта</b> (кто был прописан, когда и куда выписались, правильные ли реквизиты указаны во всех документах и пр.)</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">5</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-5.png" alt=""/></div>
+                <p><b>Подадут документы в выбранный банк для одобрения суммы ипотеки</b> (она рассчитывается исходя из результатов независимой оценки).</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">6</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-6.png" alt=""/></div>
+                <p><b>Оформят договор аванса,</b> помогут внести авансовый платеж так, чтобы исключить любые риски со стороны продавца.В документе обязательно прописывается, что остается в квартире, а что продавец увозит с собой, на каких условиях возвращает аванс и пр.</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">7</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-7.png" alt=""/></div>
+                <p><b>Подготовят пакет документов для оформления сделки купли-продажи</b></p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">8</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-8.png" alt=""/></div>
+                <p><b>Помогут застраховать ипотечную недвижимость</b></p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">9</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-9.png" alt=""/></div>
+                <p><b>Закроют сделку:</b> помогут подписать все необходимые документы (ипотечный договор, закладную, договор купли-продажи и пр.), провести финансовые расчеты, оговорить сроки освобождения квартиры (как в юридическом смысле, так и физическом – к какой дате продавец должен вывезти свои вещи).</p>
+              </div>
+              <div class="how-start__item">
+                <div class="how-start__number">10</div>
+                <div class="how-start__icon"><img src="assets/img/uploads/start-10.png" alt=""/></div>
+                <p><b>Отправят документы на регистрацию,</b> а по её окончанию передадут готовый пакет документов заказчику. Услуга считается выполненной после того, как заказчик получит свидетельство, подтверждающее права собственника, а также все закрывающие документы по сделке.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="offer-2">
+          <div class="container">
+            <div class="offer-2__wrapper">
+              <div class="offer-2__content">
+                <h2>Хотите взять квартиру в ипотеку без первоначального взноса?</h2>
+                <p>Запишитесь на бесплатную консультацию прямо сейчас!</p>
+              </div>
+              <div class="offer-2__form">
+                <form action="">
+                  <input type="text" placeholder="Имя"/>
+                  <input type="tel" placeholder="Телефон"/>
+                  <input class="btn" type="submit" value="Заказать звонок"/>
+                  <div class="offer-2-checked">
+                    <input id="policy" type="checkbox" name=""/>
+                    <label for="policy">Согласие на обработку <a href="#">персональных данных</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="parthers">
+          <div class="container">
+            <h2 class="parthers__title">Банки-партнеры</h2>
+            <div class="parthers__wrapper"><img src="assets/img/banky/absolut.jpg" alt=""/><img src="assets/img/banky/akbars.jpg" alt=""/><img src="assets/img/banky/alfa.jpg" alt=""/><img src="assets/img/banky/domrf.jpg" alt=""/><img src="assets/img/banky/gazprombank.jpg" alt=""/><img src="assets/img/banky/mkb.jpg" alt=""/><img src="assets/img/banky/otkritie.jpg" alt=""/><img src="assets/img/banky/psb.jpg" alt=""/><img src="assets/img/banky/raiffaisen.jpg" alt=""/><img src="assets/img/banky/ros.jpg" alt=""/><img src="assets/img/banky/rosselkhoz.jpg" alt=""/><img src="assets/img/banky/sanktpeterburg.jpg" alt=""/><img src="assets/img/banky/sberbank.jpg" alt=""/><img src="assets/img/banky/sovkom.jpg" alt=""/><img src="assets/img/banky/uralsib.jpg" alt=""/><img src="assets/img/banky/vtb.jpg" alt=""/></div>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A455dece8a71aef497ffea9dd5244d27ae070b2211950355a645f8139d7052af6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script></div>
+          <div class="container">
+            <div class="contacts__item">
+              <h2>Наши контакты</h2>
+              <div class="contacts-group">
+                <div class="contacts-group__icon"><img src="assets/img/uploads/whatsApp.png" alt=""/></div>
+                <div class="contacts-group__content"><a href="3">+7 (495) 266 61 61</a>
+                  <p>Пн-Пт с 10.00 до 20.00,</p>
+                  <p>Сб-Вс с 11.00 до 18.00</p>
+                </div>
+              </div>
+              <div class="contacts-group">
+                <div class="contacts-group__icon"><img src="assets/img/uploads/email.png" alt=""/></div>
+                <div class="contacts-group__content"><a href="#">info@alfaklych.ru</a></div>
+              </div>
+              <div class="contacts-address">
+                <div class="contacts-group">
+                  <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt=""/></div>
+                  <div class="contacts-group__content"><span>г. Москва, пр-кт Мира, д. 68,стр.1а, офис 408</span></div>
+                </div>
+                <div class="contacts-group">
+                  <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt=""/></div>
+                  <div class="contacts-group__content"><span>г. г. Москва, м. Котельники</span></div>
+                </div>
+                <div class="contacts-group">
+                  <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt=""/></div>
+                  <div class="contacts-group__content"><span>г. Москва, м. Строгино</span></div>
+                </div>
+              </div>
+              <div class="contacts__social"><a href=""><img src="assets/img/uploads/vk.png" alt=""/></a><a href=""><img src="assets/img/uploads/ok.png" alt=""/></a></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.min.js"></script>
+    </div>
+  </body>
+</html>

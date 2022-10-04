@@ -1,41 +1,103 @@
 $(document).ready(() => {
+  let radioName = $('input[name="radio_name"]:checked').val();
+  let radioTheme = $('input[name="radio_name"]:checked').attr('data-name');
+  let priceHome = 0;
+  let firstPrice = 0;
+  let dateCredits = 0;
 
-  $("#slider-range-1").slider({
-    range: "min",
-    value: 6500000,
-    step: 1000,
-    min: 343000,
-    max: 100000000,
-    slide: function (event, ui) {
-      $("#amount-1").val(ui.value);
-    }
+  $('#tablo-2').html(radioName + '%')
+  $('input[name="radio_name"]').change(function () {
+    radioName = $('input[name="radio_name"]:checked').val()
+    radioTheme = $('input[name="radio_name"]:checked').attr('data-name');
+
+    $('.callout').removeClass('show')
+    $('.callout[data-theme="' + radioTheme + '"]').addClass('show')
+    $('#tablo-2').html(radioName + '%')
+
+    calculate()
   });
-  $("#amount-1").val($("#slider-range-1").slider("value"));
-  $("#slider-range-2").slider({
-    range: "min",
-    value: 1500000,
-    step: 1000,
-    min: 950000,
-    max: 6000000,
-    slide: function (event, ui) {
-      $("#amount-2").val(ui.value);
+
+  const sliderRange1 = $("#slider-range-1")
+  if (sliderRange1) {
+    let dataMin = sliderRange1.attr('data-min')
+    let dataMax = sliderRange1.attr('data-max')
+    sliderRange1.slider({
+      range: "min",
+      value: 1000000,
+      step: 1000,
+      min: Number(dataMin),
+      max: Number(dataMax),
+      slide: function (event, ui) {
+        $("#amount-1").val(ui.value);
+        priceHome = ui.value
+        calculate()
+      }
+    });
+    $("#amount-1").val(sliderRange1.slider("value"));
+    priceHome = sliderRange1.slider("value")
+  }
+
+  const sliderRange2 = $("#slider-range-2")
+  if (sliderRange2) {
+    let dataMin = sliderRange2.attr('data-min')
+    let dataMax = sliderRange2.attr('data-max')
+    sliderRange2.slider({
+      range: "min",
+      value: 200000,
+      step: 1000,
+      min: Number(dataMin),
+      max: Number(dataMax),
+      slide: function (event, ui) {
+        $("#amount-2").val(ui.value);
+        firstPrice = ui.value
+        calculate()
+      }
+    });
+    $("#amount-2").val(sliderRange2.slider("value"));
+    firstPrice = sliderRange2.slider("value")
+  }
+
+  const sliderRange3 = $("#slider-range-3")
+  if (sliderRange3) {
+    let dataMin = sliderRange3.attr('data-min')
+    let dataMax = sliderRange3.attr('data-max')
+    $("#slider-range-3").slider({
+      range: "min",
+      value: 1,
+      step: 1,
+      min: Number(dataMin),
+      max: Number(dataMax),
+      slide: function (event, ui) {
+        $("#amount-3").val(ui.value);
+        dateCredits = ui.value
+        calculate()
+      }
+    });
+    $("#amount-3").val($("#slider-range-3").slider("value"));
+    dateCredits = sliderRange3.slider("value")
+  }
+
+  calculate()
+  function calculate() {
+    let summCredits = priceHome - firstPrice
+    if (summCredits < 0) {
+      summCredits = 0
     }
-  });
-  $("#amount-2").val($("#slider-range-2").slider("value"));
-  $("#slider-range-3").slider({
-    range: "min",
-    value: 20,
-    step: 1,
-    min: 1,
-    max: 30,
-    slide: function (event, ui) {
-      $("#amount-3").val(ui.value);
-    }
-  });
-  $("#amount-3").val($("#slider-range-3").slider("value"));
+    let procent = (summCredits / 100) * radioName
+    let sumProcent = (procent / 12).toFixed()
+    let dateToMounth = (Number(dateCredits) * 12).toFixed()
+    let summ = ((Number(summCredits) / Number(dateToMounth)) + Number(sumProcent)).toFixed()
+    let allSumm = (Number(summ) / 100).toFixed() * 40 + Number(summ)
+
+    $('#tablo-1').html(summ + " ₽");
+    $('#tablo-3').html(priceHome + " ₽")
+    $('#tablo-4').html(allSumm + " ₽")
+
+  }
+});
 
 
-})
+
 
 const feedbacksSwiper = new Swiper('.feedbacks__slider', {
   slidesPerView: 1,

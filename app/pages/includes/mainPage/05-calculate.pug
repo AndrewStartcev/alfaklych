@@ -3,40 +3,44 @@ section.calculator
     h2.calculator__title Калькулятор
     .calculator__body
       .calculator__form
-        .calculator__select
-          label(for="calcPrograms") Ипотечные программы
-          select#calcPrograms(name="clc_programs")
-            option(disabled value="#") Ипотечные программы
-            option(value="Построить дом") Построить дом
+        h4 Ипотечные программы
         .calculator__radio-group
           .calculator__radio
-            input#radio_1(type="radio", name="radio_name")
+            input#radio_1(type="radio", name="radio_name" data-name="Ипотека на строительство дома" value="6.3" checked)
             label(for="radio_1") Ипотека на строительство дома <span>от 6,3%</span>
           .calculator__radio
-            input#radio_2(type="radio", name="radio_name")
+            input#radio_2(type="radio", name="radio_name" data-name="Семейная ипотека" value="5.3")
             label(for="radio_2") Семейная ипотека <span>от 5,3%</span>
           .calculator__radio
-            input#radio_3(type="radio", name="radio_name")
+            input#radio_3(type="radio", name="radio_name" data-name="Ипотека без первого взноса"  value="9.9")
             label(for="radio_3") Ипотека без первого взноса <span>от 9,9%</span>
           .calculator__radio
-            input#radio_4(type="radio", name="radio_name")
+            input#radio_4(type="radio", name="radio_name" data-name="Ипотека на новостройки" value="0.1")
             label(for="radio_4") Ипотека на новостройки <span>от 0,1%</span>
-        .calculator__select
-          label(for="calcSity") Регион покупки недвижимости
-          select#calcSity(name="clc_sity")
-            option(disabled value="#") Регион покупки недвижимости
-            option(value="Москва") Москва
-        .calculator__callout.callout
-          button.callout__close
+        .calculator__callout.callout.show(data-theme="Ипотека на строительство дома")
           b По программе можно:
           ul
             li - с помощью подрядчика построить жилой дом
             li - потратить кредит на покупку участка и дальнейшее строительство дома с помощью подрядчика
+        .calculator__callout.callout(data-theme="Семейная ипотека")
+          b По программе можно:
+          ul
+            li - максимальная сумма кредита до 12млн. рублей
+            li - подходит для семей с детьми, в которых хотя бы один из детей родился после 1 января 2018 года, или для детей инвалидов.
+        .calculator__callout.callout(data-theme="Ипотека без первого взноса")
+          b По программе можно:
+          ul
+            li - одобряем ипотеку без официального трудоустройства
+            li - одобряем ипотеку с плохой кредитной историей
+        .calculator__callout.callout(data-theme="Ипотека на новостройки")
+          b По программе можно:
+          ul
+            li - Cубсидированные ставки от крупных застройщиков
         .calculator__slider
           .calculator__slider-item
             label(for="") Стоимость недвижимости
             <input type="text" id="amount-1" readonly>
-            <div id="slider-range-1"></div>
+            <div id="slider-range-1" data-min="353000" data-max="100000000" ></div>
           .calculator__slider-footer
             p от 353 000
             p до 100 000 000
@@ -44,15 +48,15 @@ section.calculator
           .calculator__slider-item
             label(for="") Первоначальный взнос
             <input type="text" id="amount-2" readonly>
-            <div id="slider-range-2"></div>
+            <div id="slider-range-2" data-min="95000" data-max="900000"></div>
           .calculator__slider-footer
-            p от 950 000
-            p до 6 000 000
+            p от 95 000
+            p до 900 000
         .calculator__slider
           .calculator__slider-item
             label(for="") Срок кредита
             <input type="text" id="amount-3" readonly>
-            <div id="slider-range-3"></div>
+            <div id="slider-range-3" data-min="1" data-max="30"></div>
           .calculator__slider-footer
             p от 1 года
             p до 30 лет
@@ -65,7 +69,7 @@ section.calculator
               p#tablo-1 36 200 ₽
             .tablo__item.blue
               h3 Процентная ставка
-              p#tablo-2 5,3%
+              p#tablo-2
             .tablo__item
               h3 Сумма кредита
               p#tablo-3 5 350 000 ₽

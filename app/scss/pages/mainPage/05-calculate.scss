@@ -179,13 +179,14 @@
 	}
 
 	.callout {
+		display: none;
 		position: relative;
 		background: #ecf5fd;
 		border-radius: 10px;
 		margin: 20px 0;
 		padding: 20px;
-		&.hide {
-			display: none;
+		&.show {
+			display: block;
 		}
 		&__close {
 			position: absolute;

@@ -1,0 +1,136 @@
+.new-style {
+	.ipoteka-how-me {
+		padding: 80px 0;
+		background: #f6f7f9;
+		h2 {
+			max-width: 720px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 48px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: $primary;
+		}
+		&__wrapper {
+			margin-top: 47px;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: flex-start;
+		}
+		&__item {
+			padding: 0 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			color: $primary;
+			i {
+				font-style: normal;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			img {
+				width: 64px;
+				height: 64px;
+				object-fit: contain;
+				margin-bottom: 38px;
+			}
+			p {
+				margin: 0;
+				font-size: 18px;
+			}
+		}
+		&__footer {
+			margin-top: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			p {
+				max-width: 740px;
+				font-size: 24px;
+				text-transform: uppercase;
+				text-align: center;
+			}
+		}
+		a.btn {
+			display: block;
+			margin: 0 auto;
+			margin-top: 40px;
+			max-width: 384px;
+			width: 100%;
+			background: $primary;
+			color: #fff;
+			&:hover {
+				background: $primary-light;
+			}
+			&:active {
+				background: darken($primary-light, 10);
+			}
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.new-style {
+		.ipoteka-how-me {
+			padding: 80px 0;
+			h2 {
+				font-size: 38px;
+			}
+			&__wrapper {
+				flex-wrap: wrap;
+				margin-top: 40px;
+				row-gap: 40px;
+			}
+			&__item {
+				flex: 0 0 50%;
+				padding: 0 30px;
+			}
+			&__footer {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+@include media-mobile-horizontal {
+	.new-style {
+		.ipoteka-how-me {
+			padding: 60px 0;
+			h2 {
+				font-size: 20px;
+			}
+			&__wrapper {
+				flex-wrap: wrap;
+				margin-top: 30px;
+				row-gap: 30px;
+			}
+			&__item {
+				flex: 0 0 100%;
+				padding: 0 0px;
+				img {
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 14px;
+					i {
+						font-size: 14px;
+					}
+				}
+			}
+			&__footer {
+				margin-top: 30px;
+				p {
+					font-size: 14px;
+				}
+				a.btn {
+					margin-top: 20px;
+					padding: 20px 0;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
