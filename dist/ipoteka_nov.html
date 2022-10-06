@@ -1,0 +1,278 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Альфа ключ</title>
+    <link rel="shortcut icon" href="assets/img/upload/favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="assets/css/style.min.css"/>
+  </head>
+  <body id="top">
+    <div class="page new-style">
+      <main class="content">
+        <section class="ipoteka-main">
+          <div class="container">
+            <h1>Ипотека в новостройках</h1>
+            <div class="ipoteka-main__body">
+              <div class="ipoteka-main__numbers">
+                <div class="ipoteka-main__item">
+                  <h2>до <i>30</i> млн. ₽</h2>
+                  <p>Сумма кредита</p>
+                </div>
+                <div class="ipoteka-main__item">
+                  <h2>до <i>30</i> лет</h2>
+                  <p>Срок кредита</p>
+                </div>
+                <div class="ipoteka-main__item">
+                  <h2>от <i>7,8%</i></h2>
+                  <p>Процентная ставка</p>
+                </div>
+                <div class="ipoteka-main__item">
+                  <h2><i>1</i> день</h2>
+                  <p>Срок рассмотрения</p>
+                </div>
+              </div>
+              <div class="ipoteka-main__block">
+                <div class="ipoteka-main__image"><img src="assets/img/uploads/ipoteka-image_2.png" alt=""/></div>
+                <div class="ipoteka-main__content">
+                  <ul>
+                    <li>Ипотека на новостройки</li>
+                    <li>Ипотека по 2м документам</li>
+                    <li>Ипотека без первоначального взноса</li>
+                    <li>Ипотека для иностранцев</li>
+                    <li>Ипотека с плохой кредитной историей</li>
+                    <li>Ипотека без страховаия жизни</li>
+                  </ul><a class="btn ipoteka-main__btn" href="#">Узнать условия кредита</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="calculator">
+          <div class="container">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <div class="calculator__body">
+              <div class="calculator__form">
+                <h4>Ипотечные программы</h4>
+                <div class="calculator__radio-group">
+                  <div class="calculator__radio">
+                    <input id="radio_1" type="radio" name="radio_name" data-name="Ипотека на строительство дома" value="6.3" checked="checked"/>
+                    <label for="radio_1">Ипотека на строительство дома <span>от 6,3%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_2" type="radio" name="radio_name" data-name="Семейная ипотека" value="5.3"/>
+                    <label for="radio_2">Семейная ипотека <span>от 5,3%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_3" type="radio" name="radio_name" data-name="Ипотека без первого взноса" value="9.9"/>
+                    <label for="radio_3">Ипотека без первого взноса <span>от 9,9%</span></label>
+                  </div>
+                  <div class="calculator__radio">
+                    <input id="radio_4" type="radio" name="radio_name" data-name="Ипотека на новостройки" value="0.1"/>
+                    <label for="radio_4">Ипотека на новостройки <span>от 0,1%</span></label>
+                  </div>
+                </div>
+                <div class="calculator__callout callout show" data-theme="Ипотека на строительство дома"><b>По программе можно:</b>
+                  <ul>
+                    <li>- с помощью подрядчика построить жилой дом</li>
+                    <li>- потратить кредит на покупку участка и дальнейшее строительство дома с помощью подрядчика</li>
+                  </ul>
+                </div>
+                <div class="calculator__callout callout" data-theme="Семейная ипотека"><b>По программе можно:</b>
+                  <ul>
+                    <li>- максимальная сумма кредита до 12млн. рублей</li>
+                    <li>- подходит для семей с детьми, в которых хотя бы один из детей родился после 1 января 2018 года, или для детей инвалидов.</li>
+                  </ul>
+                </div>
+                <div class="calculator__callout callout" data-theme="Ипотека без первого взноса"><b>По программе можно:</b>
+                  <ul>
+                    <li>- одобряем ипотеку без официального трудоустройства</li>
+                    <li>- одобряем ипотеку с плохой кредитной историей</li>
+                  </ul>
+                </div>
+                <div class="calculator__callout callout" data-theme="Ипотека на новостройки"><b>По программе можно:</b>
+                  <ul>
+                    <li>- Cубсидированные ставки от крупных застройщиков</li>
+                  </ul>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Стоимость недвижимости</label><input type="text" id="amount-1" readonly>
+<div id="slider-range-1" data-min="353000" data-max="100000000" ></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 353 000</p>
+                    <p>до 100 000 000</p>
+                  </div>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Первоначальный взнос</label><input type="text" id="amount-2" readonly>
+<div id="slider-range-2" data-min="95000" data-max="900000"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 95 000</p>
+                    <p>до 900 000</p>
+                  </div>
+                </div>
+                <div class="calculator__slider">
+                  <div class="calculator__slider-item">
+                    <label for="">Срок кредита</label><input type="text" id="amount-3" readonly>
+<div id="slider-range-3" data-min="1" data-max="30"></div>
+                  </div>
+                  <div class="calculator__slider-footer">
+                    <p>от 1 года</p>
+                    <p>до 30 лет</p>
+                  </div>
+                </div>
+              </div>
+              <div class="calculator__wrapper">
+                <div class="calculator__tablo tablo">
+                  <div class="tablo__wrapper">
+                    <div class="tablo__item">
+                      <h3>Ежемесячный платеж</h3>
+                      <p id="tablo-1">36 200 ₽</p>
+                    </div>
+                    <div class="tablo__item blue">
+                      <h3>Процентная ставка</h3>
+                      <p id="tablo-2"></p>
+                    </div>
+                    <div class="tablo__item">
+                      <h3>Сумма кредита</h3>
+                      <p id="tablo-3">5 350 000 ₽</p>
+                    </div>
+                    <div class="tablo__item">
+                      <h3>Необходимый доход</h3>
+                      <p id="tablo-4">50 680 ₽</p>
+                    </div>
+                  </div><a class="btn" href="#">Получить одобрение</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="now-complex">
+          <div class="container">
+            <h2>Жилые комплексы для получения ипотеки</h2>
+            <div class="now-complex__cards">
+              <div class="now-complex__card">
+                <div class="now-complex__cover"><img src="assets/img/uploads/cover_card.png" alt=""/></div>
+                <div class="now-complex__content">
+                  <div class="now-complex__head">
+                    <p class="now-complex__time">10 мин</p>
+                    <p class="now-complex__address">Пятницкое шоссе</p>
+                  </div>
+                  <h3>ЖК Большое Путилково</h3>
+                  <div class="now-complex__price">от 5 214 000 ₽</div><a class="btn" href="#">Посмотреть проект</a>
+                </div>
+              </div>
+              <div class="now-complex__card">
+                <div class="now-complex__cover"><img src="assets/img/uploads/cover_card.png" alt=""/></div>
+                <div class="now-complex__content">
+                  <div class="now-complex__head">
+                    <p class="now-complex__time">10 мин</p>
+                    <p class="now-complex__address">Пятницкое шоссе</p>
+                  </div>
+                  <h3>ЖК Большое Путилково</h3>
+                  <div class="now-complex__price">от 5 214 000 ₽</div><a class="btn" href="#">Посмотреть проект</a>
+                </div>
+              </div>
+              <div class="now-complex__card">
+                <div class="now-complex__cover"><img src="assets/img/uploads/cover_card.png" alt=""/></div>
+                <div class="now-complex__content">
+                  <div class="now-complex__head">
+                    <p class="now-complex__time">10 мин</p>
+                    <p class="now-complex__address">Пятницкое шоссе</p>
+                  </div>
+                  <h3>ЖК Большое Путилково</h3>
+                  <div class="now-complex__price">от 5 214 000 ₽</div><a class="btn" href="#">Посмотреть проект</a>
+                </div>
+              </div>
+              <div class="now-complex__card">
+                <div class="now-complex__cover"><img src="assets/img/uploads/cover_card.png" alt=""/></div>
+                <div class="now-complex__content">
+                  <div class="now-complex__head">
+                    <p class="now-complex__time">10 мин</p>
+                    <p class="now-complex__address">Пятницкое шоссе</p>
+                  </div>
+                  <h3>ЖК Большое Путилково</h3>
+                  <div class="now-complex__price">от 5 214 000 ₽</div><a class="btn" href="#">Посмотреть проект</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="offer">
+          <div class="container">
+            <div class="offer__wrapper">
+              <div class="offer__content">
+                <h2>Персональная консультация</h2>
+                <p>Наш менеджер перезвонит вам в течение 15 минут</p>
+              </div>
+              <div class="offer__form">
+                <form action="">
+                  <input type="text" placeholder="Имя"/>
+                  <input type="tel" placeholder="Телефон"/>
+                  <input class="btn" type="submit" value="Заказать звонок"/>
+                  <div class="offer-checked">
+                    <input id="policy" type="checkbox" name=""/>
+                    <label for="policy">Согласие на обработку <a href="#">персональных данных</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="parthers">
+          <div class="container">
+            <h2 class="parthers__title">Банки-партнеры</h2>
+            <div class="parthers__wrapper"><img src="assets/img/banky/absolut.jpg" alt=""/><img src="assets/img/banky/akbars.jpg" alt=""/><img src="assets/img/banky/alfa.jpg" alt=""/><img src="assets/img/banky/domrf.jpg" alt=""/><img src="assets/img/banky/gazprombank.jpg" alt=""/><img src="assets/img/banky/mkb.jpg" alt=""/><img src="assets/img/banky/otkritie.jpg" alt=""/><img src="assets/img/banky/psb.jpg" alt=""/><img src="assets/img/banky/raiffaisen.jpg" alt=""/><img src="assets/img/banky/ros.jpg" alt=""/><img src="assets/img/banky/rosselkhoz.jpg" alt=""/><img src="assets/img/banky/sanktpeterburg.jpg" alt=""/><img src="assets/img/banky/sberbank.jpg" alt=""/><img src="assets/img/banky/sovkom.jpg" alt=""/><img src="assets/img/banky/uralsib.jpg" alt=""/><img src="assets/img/banky/vtb.jpg" alt=""/></div>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A455dece8a71aef497ffea9dd5244d27ae070b2211950355a645f8139d7052af6&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script></div>
+          <div class="container">
+            <div class="contacts__item">
+              <h2>Наши контакты</h2>
+              <div class="contacts-group">
+                <div class="contacts-group__icon"><img src="assets/img/uploads/whatsApp.png" alt=""/></div>
+                <div class="contacts-group__content"><a href="3">+7 (495) 266 61 61</a>
+                  <p>Пн-Пт с 10.00 до 20.00,</p>
+                  <p>Сб-Вс с 11.00 до 18.00</p>
+                </div>
+              </div>
+              <div class="contacts-group">
+                <div class="contacts-group__icon"><img src="assets/img/uploads/email.png" alt=""/></div>
+                <div class="contacts-group__content"><a href="#">info@alfaklych.ru</a></div>
+              </div>
+              <div class="contacts-address">
+                <div class="contacts-group">
+                  <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt=""/></div>
+                  <div class="contacts-group__content"><span>г. Москва, пр-кт Мира, д. 68,стр.1а, офис 408</span></div>
+                </div>
+                <div class="contacts-group">
+                  <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt=""/></div>
+                  <div class="contacts-group__content"><span>г. г. Москва, м. Котельники</span></div>
+                </div>
+                <div class="contacts-group">
+                  <div class="contacts-group__icon"><img src="assets/img/uploads/map.png" alt=""/></div>
+                  <div class="contacts-group__content"><span>г. Москва, м. Строгино</span></div>
+                </div>
+              </div>
+              <div class="contacts__social"><a href=""><img src="assets/img/uploads/vk.png" alt=""/></a><a href=""><img src="assets/img/uploads/ok.png" alt=""/></a></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.min.js"></script>
+    </div>
+  </body>
+</html>

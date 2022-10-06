@@ -23,7 +23,7 @@ function main_carbon() {
               ->set_width(30)
               ->set_required( true ),
             Field::make( 'textarea', 'rich_text', 'Описание' )
-              ->set_width(70)
+              ->set_width(70),
             Field::make( 'image', 'background', 'Фоновая картинка' )
               ->set_required( true ),
         ))
@@ -83,7 +83,7 @@ function main_carbon() {
                       'type'      => 'post',
                       'post_type' => 'page',
                   )
-              ) )
+              ) ),
         ))
         ->set_header_template( '
 					<% if (title) { %>

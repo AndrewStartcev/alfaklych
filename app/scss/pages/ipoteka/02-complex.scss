@@ -1,0 +1,217 @@
+.new-style {
+	.now-complex {
+		padding: 90px 0;
+		h2 {
+			max-width: 720px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 48px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: $primary;
+		}
+		&__cards {
+			margin-top: 60px;
+			display: flex;
+			justify-content: flex-start;
+			align-items: stretch;
+			flex-wrap: wrap;
+			gap: 80px 30px;
+		}
+		&__card {
+			max-width: 370px;
+			width: 100%;
+			background-color: $white;
+			box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+		}
+		&__cover {
+			width: 100%;
+			img {
+				height: 250px;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		&__content {
+			padding: 15px 20px;
+			text-align: center;
+		}
+		&__head {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 25px;
+		}
+		&__time {
+			margin: 0;
+			position: relative;
+			font-size: 16px;
+			color: $primary;
+			font-weight: bold;
+			line-height: 1.2;
+			margin-right: 10px;
+			padding-left: 30px;
+			&::before {
+				content: '';
+				width: 21px;
+				height: 21px;
+				background: url('../img/icons/cars.png') center center / contain no-repeat;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+			}
+		}
+		&__address {
+			margin: 0;
+			font-size: 16px;
+			color: $primary;
+			line-height: 1.2;
+		}
+		h3 {
+			margin: 0;
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 1.2;
+			color: rgb(40, 39, 40);
+			margin-bottom: 25px;
+		}
+		&__price {
+			margin: 0;
+			font-size: 24px;
+			color: $primary-light;
+			font-weight: bold;
+			line-height: 1.2;
+		}
+		a.btn {
+			display: block;
+			margin: 0 auto;
+			margin-top: 35px;
+			margin-bottom: -35px;
+			max-width: 384px;
+			width: 90%;
+			padding: 20px 10px;
+			background: $primary;
+			color: #fff;
+			&:hover {
+				background: $primary-light;
+			}
+			&:active {
+				background: darken($primary-light, 10);
+			}
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.new-style {
+		.now-complex {
+			padding: 60px 0;
+			h2 {
+				font-size: 38px;
+			}
+			&__cards {
+				margin-top: 40px;
+				gap: 80px 20px;
+				justify-content: center;
+			}
+			&__card {
+				max-width: 390px;
+			}
+
+			h3 {
+				margin: 0;
+				font-size: 24px;
+				font-weight: bold;
+				line-height: 1.2;
+				color: rgb(40, 39, 40);
+				margin-bottom: 25px;
+			}
+			&__price {
+				margin: 0;
+				font-size: 24px;
+				color: $primary-light;
+				font-weight: bold;
+				line-height: 1.2;
+			}
+			a.btn {
+				padding: 20px 10px;
+			}
+		}
+	}
+}
+@include media-tablet {
+	.new-style {
+		.now-complex {
+			padding: 60px 0;
+			h2 {
+				font-size: 38px;
+			}
+			&__cards {
+				margin-top: 40px;
+				gap: 80px 20px;
+				justify-content: center;
+			}
+			&__card {
+				max-width: 350px;
+			}
+
+			h3 {
+				margin: 0;
+				font-size: 24px;
+				font-weight: bold;
+				line-height: 1.2;
+				color: rgb(40, 39, 40);
+				margin-bottom: 25px;
+			}
+			&__price {
+				margin: 0;
+				font-size: 24px;
+				color: $primary-light;
+				font-weight: bold;
+				line-height: 1.2;
+			}
+			a.btn {
+				padding: 20px 10px;
+			}
+		}
+	}
+}
+
+@include media-mobile {
+	.new-style {
+		.now-complex {
+			h2 {
+				font-size: 20px;
+			}
+			&__cards {
+				gap: 40px 20px;
+			}
+			&__cover {
+				img {
+					height: 200px;
+				}
+			}
+			&__card {
+				max-width: 100%;
+				width: 100%;
+			}
+			&__time,
+			&__address {
+				font-size: 14px;
+			}
+
+			h3 {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			&__price {
+				font-size: 16px;
+			}
+			a.btn {
+				padding: 20px 10px;
+				font-size: 14px;
+			}
+		}
+	}
+}

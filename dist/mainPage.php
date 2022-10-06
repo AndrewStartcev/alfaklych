@@ -34,7 +34,7 @@
                       <?php echo apply_filters( 'the_content', $main_slide['text'] ); ?>
                     </div>
                   <?php endif; ?>
-                  <a class="btn main-slider__btn"href="#callbackwidget"><?php echo $main_slide['btn_text'] ?></a>
+                  <a class="btn main-slider__btn" href="#callbackwidget"><?php echo $main_slide['btn_text'] ?></a>
                 </div>
               </div>
             </div>
