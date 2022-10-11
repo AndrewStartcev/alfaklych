@@ -1,4 +1,12 @@
 $(document).ready(() => {
+  headerSticky();
+
+  $('.new-header-burger').click(() => {
+    $('.new-header-burger').toggleClass('close')
+    $('.new-header-mobile-menu').toggleClass('active')
+  })
+
+
   let radioName = $('input[name="radio_name"]:checked').val();
   let radioTheme = $('input[name="radio_name"]:checked').attr('data-name');
   let priceHome = 0;
@@ -96,7 +104,20 @@ $(document).ready(() => {
   }
 });
 
+$(window).scroll(function () {
+  headerSticky()
+});
 
+function headerSticky() {
+  if ($(window).scrollTop() >= 137) {
+    $('.new-header-bottom').addClass('sticky');
+    $('.new-header-mobile-menu').addClass('sticky');
+  }
+  else {
+    $('.new-header-bottom').removeClass('sticky');
+    $('.new-header-mobile-menu').removeClass('sticky');
+  }
+}
 
 
 const feedbacksSwiper = new Swiper('.feedbacks__slider', {

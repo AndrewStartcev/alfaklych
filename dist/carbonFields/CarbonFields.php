@@ -152,3 +152,5 @@ function settings_carbon() {
 require get_stylesheet_directory() . '/inc/carbonFields/pages/main.php';
 // Ипотека
 require get_stylesheet_directory() . '/inc/carbonFields/pages/ipoteka.php';
+require get_stylesheet_directory() . '/inc/carbonFields/pages/ipoteka_now.php';
+require get_stylesheet_directory() . '/inc/carbonFields/pages/construct_house.php';
