@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  headerSticky();
 
   $('.new-header-burger').click(() => {
     $('.new-header-burger').toggleClass('close')
@@ -104,9 +103,8 @@ $(document).ready(() => {
   }
 });
 
-$(window).scroll(function () {
-  headerSticky()
-});
+$(window).scroll(headerSticky);
+$(window).ready(headerSticky);
 
 function headerSticky() {
   if ($(window).scrollTop() >= 137) {
